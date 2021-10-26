@@ -11,6 +11,8 @@ int main(void){
     return 0;
 }
 
+//sPtr cannot modify the c haracter to which it points, it is a read-only pointer
+
 void printCharacters(const char *sPtr){
     while (*sPtr != '\0'){
         printf("%c",*sPtr);
