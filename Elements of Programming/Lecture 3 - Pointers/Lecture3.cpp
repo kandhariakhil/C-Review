@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<adxintrin.h>
 /*
 void set(int *px){
     *px = 5; // In the address parsed through, in this case address 9240 set value 5
