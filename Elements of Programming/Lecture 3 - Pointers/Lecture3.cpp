@@ -37,7 +37,7 @@ int main(){
 }
 */
 
-int swap(int *pa,int *pb){ //*pa indicates get the value stored in 9240 and *pb indicates get the value in 9244
+void swap(int *pa,int *pb){ //*pa indicates get the value stored in 9240 and *pb indicates get the value in 9244
     int tmp_val = *pa;
     *pa = *pb;
     *pb = tmp_val;
