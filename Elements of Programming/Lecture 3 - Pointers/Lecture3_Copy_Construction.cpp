@@ -12,7 +12,7 @@ public:
         m_y = y;
         radius = r;
     }
-
+    // Copy constructor
     Circ (const Circ & old){
         m_x = old.m_x;
         m_y = old.m_y;
@@ -35,3 +35,11 @@ int main(){
 
 }
 
+// Copy constructor with pointers requires creating new memory
+//PiNerd(const PiNerd &src)
+//{
+//     m_n = src.m_n;
+//     m_pi = new int[m_n];
+//     for(int i = 0; i<m_n;i++)
+//         m_pi[j]=src.m_pi[j];
+// }
