@@ -9,15 +9,14 @@ struct Node
     Node *nextNode;
 };
 
-class DoublyLinkedList
+class LinkedList
 {
 private:
-    Node *headPtr, *tailPtr;
+    Node *headPtr;
 public:
     // Constructor
-    DoublyLinkedList(){
+    LinkedList(){
         headPtr = nullptr;
-        tailPtr = nullptr;
     } 
     // Print items
     void printLinkedList(){}
@@ -33,7 +32,7 @@ public:
     void delItems(int v){}
 
     // Destructor
-    ~DoublyLinkedList(){}
+    ~LinkedList(){}
     
 };
 
