@@ -95,6 +95,14 @@ public:
                 p->next = deleteNode->next;
                 delete deleteNode;
             }
+            //Deleting tailPtr requires a special case as well.
+            // node* temp = headPtr;
+            // while (temp->nextNode != tailPtr) { // Finding the penultimate node
+            //     temp = temp->nextNode;
+            // }
+            // delete tailPtr;
+            // tailPtr = temp;
+            // tailPtr->nextNode = nullptr;
         }
     }
 
