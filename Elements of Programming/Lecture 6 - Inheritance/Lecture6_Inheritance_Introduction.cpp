@@ -70,6 +70,7 @@ public:
     //     setBaseBattery(battery); 
     // }
 
+    // Since chargeBattery in robot is protected, base class can use it.
     void chargeRobot(){
         chargeBattery();
     }
