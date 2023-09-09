@@ -5,7 +5,7 @@ class Quadratic
 {
 public:
     Quadratic(float a, float b, float c);
-    Evaluate(float x);
+    float Evaluate(float x);
     ~Quadratic();
 private:
     float a, b, c;
@@ -18,7 +18,7 @@ Quadratic::Quadratic(float c1, float c2, float c3)
     c = c3;
 }
 
-Quadratic::Evaluate(float x){
+float Quadratic::Evaluate(float x){
     return a*x*x+b*x+c;
 }
 
@@ -45,7 +45,7 @@ public:
     Equation(float c1, float c2, float c3 = 0)
     : QE(c1,c2,c3){}
     double getMyValue(double x){
-        return QE.Evaluate(x)
+        return QE.Evaluate(x);
     }
     ~Equation();
 };
