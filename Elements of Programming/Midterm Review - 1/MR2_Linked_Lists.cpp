@@ -54,26 +54,24 @@ public:
         bool insertFlag = true;
         if (headPtr==nullptr){
             addToFront(newVal);
+            return;
         }
-        else{
-            Node *temp = headPtr;
-            while(temp->val != preVal && temp->next != nullptr){
-                temp = temp->next;
-            }
-            if (temp->val == preVal && temp->next == nullptr){
-                    addToRear(newVal);
-                    insertFlag = false;
-                }  
-            if (temp->val != preVal && temp->next == nullptr){
-                cout<<"End of list reached, value "<<preVal<<" not found"<<endl;
-                insertFlag = false;
-            }
-            if (insertFlag == true) {
+
+        Node *temp = headPtr;
+        while(temp != nullptr){
+            if (temp->val == preVal){
                 Node *p = new Node;
                 p->val = newVal;
                 p->next = temp->next;
                 temp->next = p;
+                return;
             }
+            temp = temp->next;
+        }
+        
+        if (temp == nullptr){
+            cout<<"End of list reached, value "<<preVal<<" not found"<<endl;
+            return;
         }
     }
 
