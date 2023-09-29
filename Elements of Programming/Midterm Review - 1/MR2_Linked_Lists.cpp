@@ -51,7 +51,7 @@ public:
     }
 
     void addElement(int newVal,int preVal){
-        bool insertFlag = true;
+
         if (headPtr==nullptr){
             addToFront(newVal);
             return;
@@ -68,7 +68,7 @@ public:
             }
             temp = temp->next;
         }
-        
+
         if (temp == nullptr){
             cout<<"End of list reached, value "<<preVal<<" not found"<<endl;
             return;
