@@ -11,8 +11,9 @@ void swap(Item &a, Item &b){
 }
 
 template <typename Item1, typename Item2>
-void printFunction(Item1 &a, Item2 &b){
+Item1 printFunction(Item1 &a, Item2 &b){
     std::cout<<"In print function "<<a<<" "<<b<<std::endl;
+    return a;
 }
 
 class Dog{
@@ -41,6 +42,7 @@ int main(){
 
     int e = 100;
     char f = 'A';
-    printFunction(e,f);
+    int returnItem = printFunction(e,f);
+    std::cout<<"Returned type: "<<returnItem<<std::endl;
 
 }
